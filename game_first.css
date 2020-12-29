@@ -1,0 +1,774 @@
+#game {
+    position: relative;
+    height: 56.25vw;
+    width: 100vw;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+}
+
+#background {
+    background-image: url("SVG/background.svg");
+    position: relative;
+    height: 56.25vw;
+    width: 100vw;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+#score {
+    background-image: url(SVG/score.svg);
+    background-repeat: no-repeat;
+    width: 15vw;
+    height: 16vw;
+    position: absolute;
+    top: 40.5vw;
+    left: 3vw;
+    z-index: 14;
+    font-size: 3.5vw;
+}
+
+#score_text_empty {
+    font-family: roboto;
+    color: #061d2f;
+    position: relative;
+    align-content: center;
+    left: 2vw;
+    line-height: 8vw;
+}
+
+#score_text {
+    font-family: roboto;
+    color: white;
+    position: relative;
+    left: 5vw;
+    top: 2vw;
+}
+
+#time {
+    background-image: url(SVG/timer.svg);
+    background-repeat: no-repeat;
+    width: 14vw;
+    height: 14vw;
+    position: absolute;
+    top: 42.5vw;
+    left: 20vw;
+    z-index: 15;
+    color: #5b7fad;
+    font-size: 3.5vw;
+}
+
+#timer {
+    font-family: roboto;
+    color: #061d2f;
+    position: relative;
+    align-content: center;
+    left: 3vw;
+    line-height: 8.5vw;
+}
+
+#yahoo {
+    height: 25vw;
+    width: 25vw;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 14;
+    position: absolute;
+    top: 21vw;
+    left: 73vw;
+}
+
+.neutral_yahoo {
+    background-image: url("SVG/yahoo.svg");
+}
+
+.sad_yahoo {
+    background-image: url("SVG/yahoo_sadface.svg");
+}
+
+.happy_yahoo {
+    background-image: url("SVG/yahoo_happyface.svg");
+}
+
+#coonie {
+    height: 25vw;
+    width: 25vw;
+    background-size: 100% 100%;
+    z-index: 14;
+    position: absolute;
+    top: 21vw;
+    left: 3.5vw;
+}
+
+.neutral_coonie {
+    background-image: url("SVG/Coonie.svg");
+}
+
+.happy_coonie {
+    background-image: url("SVG/coonie_happyface.svg")
+}
+
+.sad_coonie {
+    background-image: url("SVG/coonie_sadface.svg")
+}
+
+.bad_heart_sprite {
+    background-image: url("SVG/animation_hearts.svg");
+    background-position: left;
+    height: 8vw;
+    width: 12vw;
+    background-size: 200% 100%;
+}
+
+#bad_heart_container1,
+#bad_heart_container2,
+#bad_heart_container3,
+#bad_heart_container4,
+#bad_heart_container5 {
+    position: absolute;
+    top: -10vw;
+    z-index: 14;
+}
+
+
+.good_heart_sprite {
+    background-image: url("SVG/good_heart.svg");
+    height: 6vw;
+    width: 10vw;
+    background-size: 100% 100%;
+}
+
+#good_heart_container1,
+#good_heart_container2,
+#good_heart_container3,
+#good_heart_container4,
+#good_heart_container5 {
+    position: absolute;
+    top: -10vw;
+    z-index: 15;
+}
+
+.position1 {
+    left: 31vw;
+}
+
+.position2 {
+    left: 42.5vw;
+}
+
+.position3 {
+    left: 54vw;
+}
+
+.position4 {
+    left: 66vw;
+}
+
+#pause {
+
+    height: 4vw;
+    width: 4vw;
+    margin: 0.25vw;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.pausing {
+    background-image: url("SVG/paused_icon.svg");
+}
+
+
+.paused_icon {
+    background-image: url("SVG/resume_button.svg");
+}
+
+#settingscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 56.25vw;
+    width: 100vw;
+    z-index: 20;
+    font-family: roboto;
+    color: #f58220;
+    font-size: 2vw;
+}
+
+.settingbackground {
+    background-color: #061d2f;
+    opacity: 60%;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#settingoptions {
+    position: absolute;
+    height: 35vw;
+    width: 65vw;
+    background-color: #fff3cd;
+    top: 10vw;
+    left: 18vw;
+}
+
+#close {
+    position: relative;
+    background-image: url(SVG/close.svg);
+    background-repeat: no-repeat;
+    height: 3vw;
+    width: 3vw;
+    left: 60vw;
+    top: 2vw;
+    z-index: 28;
+    cursor: pointer;
+}
+
+#setting_icon {
+    margin-left: 23vw;
+    position: relative;
+    background-image: url(SVG/setting_icon.svg);
+    background-repeat: no-repeat;
+    height: 6vw;
+    width: 20vw;
+    text-align: right;
+    color: #061d2f;
+    font-size: 3vw;
+    line-height: 6vw;
+    cursor: pointer;
+}
+
+#setting_icons {
+    display: flex;
+    width: 100%;
+    height: 20vw;
+    justify-content: center;
+    align-items: center;
+}
+
+ol {
+    display: flex;
+    margin-top: -5vw;
+    list-style-type: none;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding-left: 9vw;
+}
+
+li {
+    display: inline;
+    text-align: center;
+    text-decoration: none;
+    padding-right: 7.75vw;
+}
+
+#mute_sound {
+    background-repeat: no-repeat;
+    height: 6vw;
+    width: 6vw;
+    padding-right: 7vw;
+    z-index: 28;
+    cursor: pointer;
+}
+
+.mute {
+    background-image: url(SVG/mute_sound.svg);
+  
+}
+
+.unmute {
+    background-image: url(SVG/unmute.svg);
+  
+}
+
+#mute_music {
+    background-repeat: no-repeat;
+    height: 6vw;
+    width: 6vw;
+    padding-right: 7vw;
+    z-index: 28;
+    cursor: pointer;
+}
+
+.muted_music {
+    background-image: url(SVG/mute_music.svg);
+}
+
+.unmute_music {
+    background-image: url(SVG/unmute_music.svg);
+}
+
+#home {
+    background-image: url(SVG/home.svg);
+    background-repeat: no-repeat;
+    height: 6vw;
+    width: 6vw;
+    padding-right: 7vw;
+    z-index: 28;
+    cursor: pointer;
+}
+
+#restart_icon {
+    background-image: url(SVG/restart.svg);
+    background-repeat: no-repeat;
+    height: 6vw;
+    width: 6vw;
+    z-index: 28;
+    cursor: pointer;
+}
+
+#settings {
+    background-image: url("SVG/setting_icon.svg");
+    height: 4vw;
+    width: 4vw;
+    margin: 0.25vw;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+#icons {
+    position: absolute;
+    top: 2.5vw;
+    left: 92vw;
+    z-index: 14;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column
+}
+
+
+#seconds {
+    font-family: roboto;
+    color: white;
+    position: relative;
+    left: 5vw;
+    top: 0vw;
+}
+
+/*Animations*/
+.break {
+    animation: break;
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+    animation-timing-function: steps(2);
+    animation-fill-mode: forwards;
+}
+
+@keyframes break {
+    to {
+        background-position: -24vw;
+    }
+}
+
+.falling {
+    animation: falling 2s infinite linear;
+}
+
+@keyframes falling {
+    to {
+        transform: translate(0vw, 56.25vw);
+    }
+}
+
+.paused {
+    animation-play-state: paused;
+}
+
+.disappear {
+    animation: disappear 0.7s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes disappear {
+    0% {
+        transform: scale(1);
+    }
+
+    75% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+.speed1 {
+    animation-duration: 7s;
+}
+
+.speed2 {
+    animation-duration: 7.5s;
+}
+
+.speed3 {
+    animation-duration: 7.3s;
+}
+
+.speed4 {
+    animation-duration: 8.4s;
+}
+
+.speed5 {
+    animation-duration: 8s;
+}
+
+.speed6 {
+    animation-duration: 7.8s;
+}
+
+.speed7 {
+    animation-duration: 8.8s;
+}
+
+#game_over {
+    background-image: url(SVG/game_over.svg);
+    position: absolute;
+    z-index: 0;
+    height: 56.25vw;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-size: 100% 100%;
+    opacity: 0%;
+}
+
+#level_complete {
+    background-image: url(SVG/level_complete.svg);
+    position: absolute;
+    z-index: 0;
+    height: 56.25vw;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-size: 100% 100%;
+    opacity: 0%;
+}
+
+#welcome {
+    background-image: url(SVG/scene_background.svg);
+    position: absolute;
+    z-index: 26;
+    height: 56.25vw;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-size: 100% 100%;
+    opacity: 100%;
+}
+
+#welcome_characters {
+    background-image: url(SVG/characters_welcome_screen.svg);
+    position: absolute;
+    z-index: 23;
+    height: 56.25vw;
+    width: 100vw;
+}
+
+.text_background {
+    position: relative;
+    left: 48vw;
+    top: 0;
+    height: 100%;
+    width: 26vw;
+    z-index: 21;
+    background-color: #061d2f;
+}
+
+#game_name {
+    position: absolute;
+    font-family: roboto;
+    font-size: 4vw;
+    color: white;
+    top: 2vw;
+    left: 49vw;
+    z-index: 22;
+}
+
+#game_name strong {
+    font-size: 5vw;
+}
+
+.flowers {
+    background-image: url(SVG/flower_top_right.svg);
+    background-repeat: no-repeat;
+    right: 1vw;
+    top: -4vw;
+    position: absolute;
+    z-index: 23;
+    height: 30vw;
+    width: 28vw;
+    transform: rotate(25deg)
+}
+
+.flowerstop {
+    background-image: url(SVG/flower_top_right.svg);
+    background-repeat: no-repeat;
+    right: 1vw;
+    top: -4vw;
+    position: absolute;
+    z-index: 24;
+    height: 30vw;
+    width: 19vw;
+    transform: rotate(24deg)
+}
+
+#flowers_welcome {
+    background-image: url(SVG/flower_welcome_ld.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 50vw;
+    width: 30vw;
+    z-index: 23;
+    left: -8vw;
+    top: 20vw;
+    overflow: hidden;
+}
+
+.start_button {
+    position: absolute;
+    font-family: roboto;
+    font-size: 4vw;
+    text-align: center;
+    line-height: 7vw;
+    color: white;
+    background-color: #f58220;
+    left: 48vw;
+    top: 43vw;
+    width: 26vw;
+    height: 7vw;
+    z-index: 22;
+    cursor: pointer;
+}
+
+#scene1 {
+    background-image: url(SVG/scene1.svg);
+    position: absolute;
+    z-index: 25;
+    height: 56.25vw;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-size: 100% 100%;
+    opacity: 100%;
+}
+
+#scene2 {
+    background-image: url(SVG/scene2.svg);
+    position: absolute;
+    z-index: 24;
+    height: 56.25vw;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-size: 100% 100%;
+    opacity: 100%;
+}
+
+#instructions {
+    background-image: url(SVG/Instructions.svg);
+    position: absolute;
+    z-index: 23;
+    height: 56.25vw;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-size: 100% 100%;
+    opacity: 100%;
+}
+
+#countdown {
+    background-image: url(SVG/count_down.svg);
+    position: absolute;
+    background-size: 100% 100%;
+    top: 10vw;
+    left: 35vw;
+    height: 30vw;
+    width: 30vw;
+    z-index: 20;
+}
+
+#countdown .secs {
+    font-family: roboto;
+    font-size: 8vw;
+    color: white;
+    text-align: center;
+    padding-left: 1vw;
+    line-height: 30vw;
+}
+
+.side_text_background {
+    position: relative;
+    left: 68vw;
+    top: 0;
+    height: 100%;
+    width: 26vw;
+    z-index: 23;
+    background-color: #061d2f;
+}
+
+#scene2 .side_text_background {
+    z-index: 23;
+}
+
+#instructions .side_text_background {
+    z-index: 23;
+}
+
+.next_button {
+    position: absolute;
+    font-family: roboto;
+    font-size: 4vw;
+    text-align: center;
+    line-height: 7vw;
+    color: white;
+    background-color: #f58220;
+    left: 68vw;
+    top: 38vw;
+    width: 26vw;
+    height: 7vw;
+    z-index: 55;
+    cursor: pointer;
+}
+
+#scene1 .next_button {
+    z-index: 55;
+}
+
+#scene2 .next_button {
+    z-index: 55;
+}
+
+#instructions .next_button {
+    z-index: 55;
+}
+
+.skip_button {
+    position: absolute;
+    font-family: roboto;
+    font-size: 2vw;
+    text-align: center;
+    left: 68vw;
+    top: 46vw;
+    width: 26vw;
+    height: 7vw;
+    z-index: 55;
+    color: #f58220;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.text_on_side {
+    position: relative;
+    top: 11vw;
+    font-family: roboto;
+    font-size: 2.25vw;
+    text-align: center;
+    color: white;
+    padding: 3vw 3vw 4vw 3vw;
+}
+
+.show_score {
+    position: relative;
+    top: 14vw;
+    font-family: roboto;
+    font-size: 3.25vw;
+    text-align: center;
+    color: white;
+    padding: 3vw 3vw 4vw 3vw;
+}
+
+.flowers_first_screen {
+    position: absolute;
+    background-image: url(SVG/flowers_scene1.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 24;
+}
+
+
+
+/*
+.fadeout{
+    animation: fadeout 2s 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeout {
+    from{
+        opacity: 100%;
+    }
+    to{
+        opacity: 0%;
+    }
+}
+*/
+
+.slideleft{
+    animation: slideleft 1.5s 1; 
+    animation-fill-mode: forwards;
+}
+@keyframes slideleft{
+to{transform: translateX(130vw);
+    }}
+.slideright{
+    animation: slideleft 1.5s 1; 
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+}
+@keyframes slideleft{
+to{transform: translateX(130vw);
+    }}
+
+.moveaway {
+    animation: moveaway 3s 1;
+    animation-fill-mode: forwards;
+}
+
+.visible {
+    animation: visiblee 1s 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes visiblee {
+    from{
+        opacity: 0%;
+         z-index: 26;
+    }
+    to {
+        opacity: 100%;
+        z-index: 26;
+       
+    }
+/*
+    from{
+        left: -110vw;
+    }
+    to{
+        left: 0vw;
+        z-index: 26;
+    }
+*/
+}
+
+
+@keyframes moveaway {
+    from{
+        left: 0;
+    }
+    to{
+        left: -110vw;
+    }
+}
+
+.hide {
+    display: none;
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Coonie's New Friend</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game_first.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="screen">
+        <div id="game">
+            <audio id="background_music" src="sounds/background_sound.mp3"></audio>
+            <div id="background"></div>
+            <div id="yahoo" class="sad_yahoo"></div>
+            <div id="coonie" class="sad_coonie"></div>
+            <div id="game_elements">
+                <audio id="getting_point_sound" src="sounds/clicked_good_heart.mp3"></audio>
+                <audio id="loosing_point_yahoo" src="sounds/Yahoo_barking.mp3"></audio>
+                <audio id="loosing_point_sound" src="sounds/bad_heart_clicked_sound.mp3"></audio>
+                <div id="scored">Score:
+                </div>
+                <div id="bad_heart_container1">
+                    <div class="bad_heart_sprite"></div>
+                </div>
+                <div id="bad_heart_container2">
+                    <div class="bad_heart_sprite"></div>
+                </div>
+                <div id="bad_heart_container3">
+                    <div class="bad_heart_sprite"></div>
+                </div>
+                <div id="bad_heart_container4">
+                    <div class="bad_heart_sprite"></div>
+                </div>
+                <div id="bad_heart_container5">
+                    <div class="bad_heart_sprite"></div>
+                </div>
+                <div id="good_heart_container1">
+                    <div class="good_heart_sprite"></div>
+                </div>
+                <div id="good_heart_container2">
+                    <div class="good_heart_sprite"></div>
+                </div>
+                <div id="good_heart_container3">
+                    <div class="good_heart_sprite"></div>
+                </div>
+                <div id="good_heart_container4">
+                    <div class="good_heart_sprite"></div>
+                </div>
+                <div id="good_heart_container5">
+                    <div class="good_heart_sprite"></div>
+                </div>
+                <div id="game_ui">
+                    <div id=icons>
+                        <div id="pause" class="pausing">
+                        </div>
+                        <div id="settings"></div>
+                    </div>
+                    <div id="score">
+                        <div id="score_text_empty">score</div>
+                        <div id="score_text">0</div>
+                    </div>
+                    <div id="time">
+                        <div id="timer">time</div>
+                        <div id="seconds">30</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="start">
+            <div id="welcome">
+                <div id="welcome_characters"></div>
+                <div class="flowers"></div>
+                <div id="game_name"><strong>BUCKET'S</strong><br>NEW FRIEND</div>
+                <div id="flowers_welcome"></div>
+                <div class="text_background"></div>
+                <div class="start_button">PLAY!</div>
+            </div>
+
+            <div id="scene1" class="hide">
+                <div class="side_text_background">
+                    <div class="text_on_side">You found a
+                        Raccoon in your trash! He stole your trash and your heart! You decided to keep him </div>
+                </div>
+                <div class="flowers_first_screen"></div>
+                <div class="flowerstop"></div>
+                <div class="next_button">NEXT!</div>
+                <div class="skip_button">SKIP TO THE GAME</div>
+            </div>
+
+
+            <div id="scene2" class="hide">
+                <div class="side_text_background">
+                    <div class="text_on_side"><br>Now you need to make sure that Yahoo also loves Bucket as much as you!</div>
+                </div>
+                <div class="flowerstop"></div>
+                <div class="next_button">NEXT!</div>
+                <div class="skip_button">SKIP TO THE GAME</div>
+            </div>
+
+
+            <div id="instructions" class="hide">
+                <div class="side_text_background">
+                    <div class="text_on_side"><br>And hurry!<br>You only have 30 seconds!</div>
+                </div>
+                <div class="flowerstop"></div>
+                <div class="next_button">Play!</div>
+            </div>
+            
+            <div id="countdown" class="hide">
+                <div class="secs"></div>
+            </div>
+
+        </div>
+        <div id="settingscreen" class="hide">
+            <div class="settingbackground"></div>
+            <div class="flowers_first_screen"></div>
+            <div class="flowerstop"></div>
+
+
+            <div id="settingoptions">
+                <div id="close"></div>
+                <div id="setting_icon">Settings</div>
+                <div id="setting_icons">
+                    <div id="mute_sound" class="unmute"></div>
+                    <div id="mute_music" class="muted_music"></div>
+                    <div id="home"></div>
+                    <div id="restart_icon"></div>
+                </div>
+                <ol>
+                        <li>  sounds</li>
+                        <li>music</li>
+                        <li>home</li>
+                        <li>restart</li>
+                    </ol>
+            </div>
+        </div>
+
+        <div id="game_over">
+            <div class="side_text_background">
+                <div class="text_on_side">GAME OVER<br>Unfortunately Yahoo and Bucket</div>
+                <div class="show_score">SCORE:</div>
+            </div>
+            <div class="flowerstop"></div>
+            <div class="next_button">TRY AGAIN!</div>
+            <div class="skip_button">instructions</div>
+            <audio id="game_over_sound" src="sounds/game-over.mp3"></audio>
+        </div>
+
+        <div id="level_complete">
+            <div class="side_text_background">
+                <div class="text_on_side">SUCCESS!<br>Yahoo and Bucket love each other</div>
+                <div class="show_score">SCORE:</div>
+            </div>
+            <div class="flowerstop"></div>
+            <div class="next_button">NEXT LEVEL!</div>
+            <div class="skip_button">instructions</div>
+            <audio id="level_complete_sound" src="sounds/level_complete.wav"></audio>
+        </div>
+
+    </div>
+    <script src="game_third.js"></script>
+</body></html>

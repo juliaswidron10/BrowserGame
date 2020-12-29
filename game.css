@@ -1,0 +1,235 @@
+#screen {
+    background-color: cornflowerblue;
+    height: 100%;
+    margin: 0;
+}
+
+#background {
+    background-image: url("SVG/game_background.svg");
+    height: 100vw;
+    width: 100%;
+    margin: 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    z-index: 1;
+    position: absolute;
+}
+
+#yahoo {
+    background-image: url("SVG/yahoo.svg");
+    height: 25vw;
+    width: 25vw;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 1000;
+    position: absolute;
+    top: 21vw;
+    left: 75vw;
+}
+
+#coonie {
+    background-image: url("SVG/Coonie.svg");
+    height: 25vw;
+    width: 100%;
+    background-size: 100% 100%;
+    z-index: 1000;
+    position: absolute;
+    top: 21vw;
+    left: -30vw;
+}
+
+#bad_heart_container1 {
+    position: absolute;
+    top: 10vw;
+    left: 35vw;
+    z-index: 100000000;
+    animation: falling 3s infinite ease-in;
+    animation-delay: 0.5s;
+}
+#bad_heart_container2 {
+    position: absolute;
+    top: 10vw;
+    left: 45vw;
+    z-index: 10000000000;
+    animation: falling 3.3s infinite ease-in;
+    animation-delay: 0.7s;
+}
+#bad_heart_container3 {
+    position: absolute;
+    top: 10vw;
+    left: 55vw;
+    z-index: 10000000000;
+    animation: falling 1.7s infinite ease-in;
+    animation-delay: 0.9s;
+}
+#bad_heart_container4 {
+    position: absolute;
+    top: 10vw;
+    left: 65vw;
+    z-index: 10000000000;
+    animation: falling 2.6s infinite ease-in;
+    animation-delay: 0.3s;
+}
+#bad_heart_container5 {
+    position: absolute;
+    top: 10vw;
+    left: 45vw;
+    z-index: 10000000000;
+    animation: falling 2s infinite ease-in;
+    animation-delay: 0.6s;
+}
+
+.good_heart_sprite {
+    background-image: url("SVG/good_heart.svg");
+    height: 6vw;
+    width: 10vw;
+    background-size: 100% 100%;
+}
+
+#good_heart_container1 {
+    position: absolute;
+    top: 10vw;
+    left: 35vw;
+    z-index: 100000000;
+    animation: falling 3s infinite ease-in;
+    animation-delay: 0.1s;
+}
+#good_heart_container2 {
+    position: absolute;
+    top: 10vw;
+    left: 45vw;
+    z-index: 10000000000;
+    animation: falling 1.4s infinite ease-in;
+    animation-delay: 0.7s;
+}
+#good_heart_container3 {
+    position: absolute;
+    top: 10vw;
+    left: 55vw;
+    z-index: 10000000000;
+    animation: falling 1.8s infinite ease-in;
+    animation-delay: 2.6s;
+}
+#good_heart_container4 {
+    position: absolute;
+    top: 10vw;
+    left: 65vw;
+    z-index: 10000000000;
+    animation: falling 2.6s infinite ease-in;
+    animation-delay: 2.3s;
+}
+#good_heart_container5 {
+    position: absolute;
+    top: 10vw;
+    left: 65vw;
+    z-index: 10000000000;
+    animation: falling 2s infinite ease-in;
+    animation-delay: 0.6s;
+}
+
+.bad_heart_sprite {
+    background-image: url("SVG/bad_heart.svg");
+    height: 6vw;
+    width: 10vw;
+    background-size: 100% 100%;
+}
+
+@keyframes falling{
+    to{
+        transform: translate(0, 60vh)
+    }
+}
+
+#stop {
+    background-image: url("SVG/stop_icon.svg");
+    grid-area: stop;
+    height: 3vw;
+    width: 3vw;
+    margin: 0.25vw;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    align-content: right;
+
+}
+
+#pause {
+    background-image: url("SVG/pause_icon.svg");
+    height: 3vw;
+    width: 3vw;
+    margin: 0.25vw;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    align-content: right;
+    grid-area: pause;
+}
+#settings {
+    background-image: url("SVG/settings_icon.svg");
+    height: 3vw;
+    width: 3vw;
+    margin: 0.25vw;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    align-content: right;
+    grid-area: sett;
+}
+#icons {
+    position: absolute;
+    top: 2.5vw;
+    left: 88vw;
+    width: 4vw;
+    z-index: 1100000;
+    background-size: 100% 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "stop pause sett";
+
+}
+
+#like_bar {
+    position: absolute;
+    top: 4vw;
+    left: 32vw;
+    background-image: url("SVG/like_bar.svg");
+    height: 6vw;
+    width: 50vw;
+    z-index: 110000;
+    background-size: 100% 100%;
+}
+
+#progress_bar {
+    background-image: url("SVG/like_progress.svg");
+    position: absolute;
+    top: 8vw;
+    left: 32vw;
+    height: 1.5vw;
+    width: 50vw;
+    z-index: 11000;
+    background-size: 100% 100%;
+}
+
+#clock {
+    position: absolute;
+    top: 4vw;
+    left: -18vw;
+    background-image: url("SVG/clock.svg");
+    height: 6vw;
+    width: 100%;
+    background-size: 100% 100%;
+    z-index: 10000;
+}
+
+#times_up {
+    opacity: 0;
+    position: absolute;
+    top: 4vw;
+    left: -18vw;
+    background-image: url("SVG/times_up.svg");
+    height: 6vw;
+    width: 100%;
+    background-size: 100% 100%;
+    z-index: 100000;
+}
+
+#welcome{
+    ba
+}
